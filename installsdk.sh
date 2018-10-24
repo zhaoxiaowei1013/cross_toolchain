@@ -320,24 +320,24 @@ install_sdk() {
 		exit 1
 	fi
 
-	if [ ${SDK_VER} = "3.1" ]; then
-		TOOLS_VER=8.0.08
-	elif [ ${SDK_VER} = "3.0" ]; then
-		TOOLS_VER=7.2.12
-	fi
-	if [[ ${HEXAGON_TOOLS_ROOT} = */${TOOLS_VER}/Tools ]] ; then
-		if [ ! -f ${HEXAGON_TOOLS_ROOT}/bin/hexagon-clang ]; then
-			echo
-			echo "The Hexagon Tools ${TOOLS_VER} version was not installed."
-			echo "Re-install Hexagon SDK ${SDK_VER}"
-			echo
-			exit 1
-		fi
-	else
-		echo "***************************************************************************"
-		echo "WARNING: Unsupported version of Hexagon Tools is being used ${HEXAGON_TOOLS_ROOT} ${SDK_VER}"
-		echo "***************************************************************************"
-	fi
+#	if [ ${SDK_VER} = "3.1" ]; then
+#		TOOLS_VER=8.0.08
+#	elif [ ${SDK_VER} = "3.0" ]; then
+#		TOOLS_VER=7.2.12
+#	fi
+#	if [[ ${HEXAGON_TOOLS_ROOT} = */${TOOLS_VER}/Tools ]] ; then
+#		if [ ! -f ${HEXAGON_TOOLS_ROOT}/bin/hexagon-clang ]; then
+#			echo
+#			echo "The Hexagon Tools ${TOOLS_VER} version was not installed."
+#			echo "Re-install Hexagon SDK ${SDK_VER}"
+#			echo
+#			exit 1
+#		fi
+#	else
+#		echo "***************************************************************************"
+#		echo "WARNING: Unsupported version of Hexagon Tools is being used ${HEXAGON_TOOLS_ROOT} ${SDK_VER}"
+#		echo "***************************************************************************"
+#	fi
 }
 
 get_arm_compiler() {
